@@ -1,0 +1,5 @@
+select index_name,index_type,status,domidx_status,domidx_opstatus from user_indexes where index_type like '%DOMAIN%' and (domidx_status <> 'VALID' or domidx_opstatus <> 'VALID');
+
+
+
+alter index IXTEXT_DM_BENHNHAN_I2 rebuild;

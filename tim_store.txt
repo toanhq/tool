@@ -1,0 +1,8 @@
+select distinct pro_name from
+(
+    select text, name pro_name from user_source
+    --where name = 'sp_clsyeucauchitiet'
+    where text like '%phucmh2%'-- like text
+          and name not like 'sp_bc%'
+    order by line
+);
